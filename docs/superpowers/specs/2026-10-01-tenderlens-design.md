@@ -50,7 +50,7 @@ Step Functions (Standard) "AnalyzeTender"
 - **Region:** us-east-1. **Models:** Claude Sonnet (agents) and Claude Haiku (summary) on Amazon Bedrock via
   the Converse API with forced tool use for structured output.
 - **Storage:** S3 bucket (`tenders/`, `pages/`, `results/`); DynamoDB tables `Profiles`, `Analyses`, `Schemes`.
-- **IaC:** single AWS CDK (Python) stack. Lambda dependencies vendored with `pip --platform manylinux2014_x86_64`
+- **IaC:** single AWS CDK (TypeScript) stack. Lambda dependencies vendored with `pip --platform manylinux2014_x86_64`
   (no Docker).
 - **ExtractText:** `pypdf` per page; pages with < 40 chars of text are OCR'd with Textract. If the document
   exceeds the token budget (~350k chars), pages are ranked by eligibility/risk keyword density and the top

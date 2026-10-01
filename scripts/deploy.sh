@@ -5,5 +5,5 @@ cd "$(dirname "$0")/.."
 
 backend/.venv/Scripts/python scripts/build_lambda.py
 (cd frontend && npm run build)
-(cd infra && npx --yes aws-cdk@2 deploy TenderLens --require-approval never --outputs-file ../build/outputs.json "$@")
+(cd infra && npx cdk deploy TenderLens --require-approval never --outputs-file ../build/outputs.json "$@")
 cat build/outputs.json

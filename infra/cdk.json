@@ -1,5 +1,5 @@
 {
-  "app": ".venv/Scripts/python app.py",
+  "app": "npx tsx bin/app.ts",
   "context": {
     "model": "anthropic.claude-opus-5-5",
     "fallback_model": "anthropic.claude-opus-4-8"

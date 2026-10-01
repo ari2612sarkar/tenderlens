@@ -1,0 +1,6 @@
+pydantic>=2.8
+rapidfuzz>=3.9
+pypdf>=5.0
+anthropic[bedrock]>=1.11
+boto3
+pytest
