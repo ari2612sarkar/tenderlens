@@ -1,0 +1,21 @@
+{
+  "id": "demo-shakti-facility",
+  "name": "Shakti Facility Services (demo)",
+  "enterprise_size": "micro",
+  "dpiit_startup": false,
+  "state": "Uttar Pradesh",
+  "incorporation_year": 2021,
+  "net_worth_inr": 4500000,
+  "employee_count": 85,
+  "turnover_by_fy": {"2025-26": 8800000, "2024-25": 6100000, "2023-24": 3900000},
+  "certifications": ["ISO 9001:2015"],
+  "registrations": ["GST", "PAN", "Udyam", "EPF", "ESIC", "Labour Licence"],
+  "past_projects": [
+    {"title": "Housekeeping at a central government office complex", "client_type": "govt", "value_inr": 3600000, "completed_year": 2025, "work_tags": ["facility_management", "manpower"]},
+    {"title": "Staff cab services for a PSU bank zonal office", "client_type": "psu", "value_inr": 1800000, "completed_year": 2024, "work_tags": ["transport_logistics"]}
+  ],
+  "oem_authorizations": [],
+  "sector_tags": ["facility_management", "manpower", "transport_logistics"],
+  "women_owned": true,
+  "sc_st_owned": false
+}

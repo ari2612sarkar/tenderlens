@@ -1,0 +1,46 @@
+[
+  {
+    "id": "gem-7801296",
+    "bid_number": "GEM/2026/B/7801296",
+    "title": "Design & development of customised enterprise software for scanning and digitisation of documents",
+    "organisation": "Indian Air Force, Ministry of Defence",
+    "sector": "IT services",
+    "closes": "2026-10-23",
+    "pdf": "gem_9622880.pdf",
+    "profile_id": "demo-acme-infotech",
+    "analysis_id": "sample-gem-7801296"
+  },
+  {
+    "id": "gem-8098112",
+    "bid_number": "GEM/2026/B/8098112",
+    "title": "Need-basis cab & bus services (24x7)",
+    "organisation": "Ministry of Micro, Small & Medium Enterprises",
+    "sector": "Transport services",
+    "closes": "2026-10-31",
+    "pdf": "gem_9963461.pdf",
+    "profile_id": "demo-shakti-facility",
+    "analysis_id": "sample-gem-8098112"
+  },
+  {
+    "id": "gem-8098569",
+    "bid_number": "GEM/2026/B/8098569",
+    "title": "Comprehensive cleaning and housekeeping",
+    "organisation": "Ministry of Railways",
+    "sector": "Facility management",
+    "closes": "2026-10-28",
+    "pdf": "gem_9963946.pdf",
+    "profile_id": "demo-shakti-facility",
+    "analysis_id": "sample-gem-8098569"
+  },
+  {
+    "id": "gem-8078811",
+    "bid_number": "GEM/2026/B/8078811",
+    "title": "Laboratory furniture: wall-side lab tables with corner units",
+    "organisation": "Ministry of Micro, Small & Medium Enterprises",
+    "sector": "Goods supply",
+    "closes": "2026-10-22",
+    "pdf": "gem_9941216.pdf",
+    "profile_id": "demo-acme-infotech",
+    "analysis_id": "sample-gem-8078811"
+  }
+]

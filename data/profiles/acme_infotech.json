@@ -1,0 +1,22 @@
+{
+  "id": "demo-acme-infotech",
+  "name": "Acme Infotech Pvt Ltd (demo)",
+  "enterprise_size": "small",
+  "dpiit_startup": false,
+  "state": "Haryana",
+  "incorporation_year": 2017,
+  "net_worth_inr": 32000000,
+  "employee_count": 42,
+  "turnover_by_fy": {"2025-26": 31000000, "2024-25": 26000000, "2023-24": 21000000},
+  "certifications": ["ISO 9001:2015", "ISO 27001:2022"],
+  "registrations": ["GST", "PAN", "Udyam", "EPF", "ESIC"],
+  "past_projects": [
+    {"title": "Document management system for a state PSU", "client_type": "psu", "value_inr": 9500000, "completed_year": 2025, "work_tags": ["software_development", "data_ai_services"]},
+    {"title": "e-Office rollout for district administration", "client_type": "govt", "value_inr": 6200000, "completed_year": 2024, "work_tags": ["software_development", "it_support"]},
+    {"title": "Scanning & digitisation of land records", "client_type": "govt", "value_inr": 4800000, "completed_year": 2023, "work_tags": ["data_ai_services", "software_development"]}
+  ],
+  "oem_authorizations": [],
+  "sector_tags": ["software_development", "data_ai_services", "it_support"],
+  "women_owned": false,
+  "sc_st_owned": false
+}
