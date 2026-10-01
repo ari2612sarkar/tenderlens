@@ -1,0 +1,26 @@
+"""Fixed work-category taxonomy shared by tender rules, scheme rules and company profiles."""
+
+WORK_TAGS: dict[str, str] = {
+    "software_development": "Software / application development",
+    "it_support": "IT support, AMC, helpdesk",
+    "it_hardware_supply": "IT hardware supply and installation",
+    "networking": "Networking, LAN/WAN, telecom",
+    "cloud_services": "Cloud, hosting, data centre services",
+    "data_ai_services": "Data, analytics, AI/ML services",
+    "consultancy": "Consultancy / advisory / PMC",
+    "manpower": "Manpower outsourcing",
+    "facility_management": "Facility management, housekeeping",
+    "security_services": "Security services",
+    "civil_works": "Civil construction works",
+    "electrical_works": "Electrical works",
+    "mechanical_works": "Mechanical / HVAC works",
+    "goods_supply": "General goods supply",
+    "medical_supplies": "Medical equipment and supplies",
+    "printing_stationery": "Printing and stationery",
+    "transport_logistics": "Transport, vehicle hiring, logistics",
+    "training_education": "Training and education services",
+    "manufacturing": "Manufacturing",
+    "solar_renewable": "Solar / renewable energy",
+    "catering": "Catering and food services",
+    "event_management": "Event management, media, advertising",
+}
