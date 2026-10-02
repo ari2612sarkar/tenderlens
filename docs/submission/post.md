@@ -1,6 +1,6 @@
 # Builder Center project post: TenderLens
 
-> Paste everything below the line into your Builder Center project. Replace `[[GITHUB_URL]]` (and
+> Paste everything below the line into your Builder Center project. Replace `https://github.com/ari2612sarkar/tenderlens` (and
 > `[[VIDEO_URL]]` if you record one). Upload `architecture.png`, `proof/partyrock-verdict.jpg`,
 > `proof/partyrock-app.jpg` and `proof/partyrock-build.gif`. Tags: **#commercial-potential** and **#startups**.
 
@@ -9,7 +9,7 @@
 ## TenderLens: know if your MSME can bid on a government tender before you read 40 pages of it
 
 **Live app (runs on AWS PartyRock / Amazon Bedrock):** https://partyrock.aws/u/soviet1991/OCmIbF0Qg/TenderLens-Lite%253A-Government-Bid-Eligibility-Checker
-**Code:** [[GITHUB_URL]]  ·  **Category:** Commercial potential  ·  **Lane:** Startups
+**Code:** https://github.com/ari2612sarkar/tenderlens  ·  **Category:** Commercial potential  ·  **Lane:** Startups
 
 ### The problem
 

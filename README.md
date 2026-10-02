@@ -9,6 +9,8 @@ MSME schemes.
 
 **Live app (AWS PartyRock, Amazon Bedrock):** https://partyrock.aws/u/soviet1991/OCmIbF0Qg/TenderLens-Lite%253A-Government-Bid-Eligibility-Checker
 
+**Code:** https://github.com/ari2612sarkar/tenderlens
+
 Built for **AWS Builder Center: Zero to Shipped (2026)** · Category `#commercial-potential` · Lane `#startups`
 (Valivo.ai's first vertical).
 
