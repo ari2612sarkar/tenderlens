@@ -1,8 +1,8 @@
 # Builder Center project post: TenderLens
 
-> Paste everything below the line into your Builder Center project. If you record a video, add its link; otherwise delete the `[[VIDEO_URL]]` mention if present. Upload
-> `[[VIDEO_URL]]` if you record one). Upload `architecture.png`, `proof/partyrock-verdict.jpg`,
-> `proof/partyrock-app.jpg` and `proof/partyrock-build.gif`. Tags: **#commercial-potential** and **#startups**.
+> Paste everything below the line into your Builder Center project. Upload `architecture.png`,
+> `proof/partyrock-verdict.jpg`, `proof/partyrock-app.jpg` and `proof/partyrock-build.gif`.
+> Tags: **#commercial-potential** and **#startups**.
 
 ---
 
