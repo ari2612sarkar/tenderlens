@@ -68,7 +68,7 @@ Browser ── CloudFront ──┬── S3 (React app)
 | `data/samples/` | Live GeM bid documents used as samples |
 | `data/schemes/` | Official scheme sources and extracted, grounded rules |
 | `scripts/` | Build, deploy, scheme ingestion, sample precompute |
-| `docs/` | Design spec and submission notes |
+| `docs/` | Design spec, submission pack (`docs/submission/`: post, runbook, demo script, architecture) |
 
 ## Run it
 

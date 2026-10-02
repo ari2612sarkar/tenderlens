@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 724" width="1200" height="724" font-family="Archivo, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#18212E"/>
+    </marker>
+    <marker id="arrowv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4636A6"/>
+    </marker>
+    <style>
+      .t { font-size: 15px; font-weight: 700; fill: #18212E; }
+      .s { font-size: 12.5px; fill: #4A5566; }
+      .cap { font-size: 13px; font-weight: 600; }
+      .box { fill: #FFFFFF; stroke: #18212E; stroke-opacity: .35; stroke-width: 1.5; }
+      .ai { fill: #ECEBF8; stroke: #4636A6; stroke-width: 2; }
+      .code { fill: #E4F1E9; stroke: #2D7650; stroke-width: 2; }
+      .line { stroke: #18212E; stroke-width: 1.6; fill: none; }
+      .vline { stroke: #4636A6; stroke-width: 1.6; fill: none; stroke-dasharray: 5 4; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="724" fill="#F3F5F1"/>
+  <text x="40" y="48" font-size="26" font-weight="800" fill="#18212E">TenderLens on AWS</text>
+  <text x="40" y="74" font-size="15" fill="#4A5566">The AI reads. Code verifies every quote. Rules decide the verdict.</text>
+
+  <!-- request path -->
+  <rect class="box" x="40" y="130" width="150" height="70" rx="10"/>
+  <text class="t" x="115" y="160" text-anchor="middle">Browser</text>
+  <text class="s" x="115" y="180" text-anchor="middle">MSME owner, judge</text>
+
+  <rect class="box" x="240" y="130" width="170" height="70" rx="10"/>
+  <text class="t" x="325" y="160" text-anchor="middle">Amazon CloudFront</text>
+  <text class="s" x="325" y="180" text-anchor="middle">site + /api/* same origin</text>
+
+  <rect class="box" x="470" y="95" width="180" height="56" rx="10"/>
+  <text class="t" x="560" y="119" text-anchor="middle">Amazon S3</text>
+  <text class="s" x="560" y="138" text-anchor="middle">React web app</text>
+
+  <rect class="box" x="470" y="175" width="180" height="56" rx="10"/>
+  <text class="t" x="560" y="199" text-anchor="middle">Amazon API Gateway</text>
+  <text class="s" x="560" y="218" text-anchor="middle">HTTP API, throttled</text>
+
+  <rect class="box" x="710" y="175" width="170" height="56" rx="10"/>
+  <text class="t" x="795" y="199" text-anchor="middle">AWS Lambda (api)</text>
+  <text class="s" x="795" y="218" text-anchor="middle">profiles, uploads, reports</text>
+
+  <rect class="box" x="940" y="95" width="220" height="56" rx="10"/>
+  <text class="t" x="1050" y="119" text-anchor="middle">Amazon DynamoDB</text>
+  <text class="s" x="1050" y="138" text-anchor="middle">analyses, profiles, rate limits</text>
+
+  <rect class="box" x="940" y="175" width="220" height="56" rx="10"/>
+  <text class="t" x="1050" y="199" text-anchor="middle">Amazon S3</text>
+  <text class="s" x="1050" y="218" text-anchor="middle">tenders, page text, step artifacts</text>
+
+  <path class="line" d="M190 165 H236" marker-end="url(#arrow)"/>
+  <path class="line" d="M410 155 C440 155 440 123 466 123" marker-end="url(#arrow)"/>
+  <path class="line" d="M410 175 C440 175 440 203 466 203" marker-end="url(#arrow)"/>
+  <path class="line" d="M650 203 H706" marker-end="url(#arrow)"/>
+  <path class="line" d="M880 195 C905 195 905 123 936 123" marker-end="url(#arrow)"/>
+  <path class="line" d="M880 211 H936" marker-end="url(#arrow)"/>
+  <path class="line" d="M795 231 V286" marker-end="url(#arrow)"/>
+  <text class="s" x="805" y="264">StartExecution</text>
+
+  <!-- step functions -->
+  <rect x="40" y="290" width="1120" height="290" rx="14" fill="#FFFFFF" stroke="#18212E" stroke-opacity=".25" stroke-width="1.5"/>
+  <text class="t" x="62" y="318">AWS Step Functions: TenderLens-AnalyzeTender</text>
+  <text class="s" x="1138" y="318" text-anchor="end">retries on throttling; any failure is caught and reported</text>
+
+  <rect class="box" x="62" y="380" width="148" height="64" rx="10"/>
+  <text class="t" x="136" y="408" text-anchor="middle">ExtractText</text>
+  <text class="s" x="136" y="427" text-anchor="middle">page-numbered text</text>
+
+  <rect x="248" y="338" width="214" height="164" rx="12" fill="none" stroke="#4636A6" stroke-width="1.4" stroke-dasharray="6 5"/>
+  <text class="cap" x="258" y="356" fill="#4636A6">Parallel: the AI reads</text>
+  <rect class="ai" x="264" y="362" width="182" height="58" rx="10"/>
+  <text class="t" x="355" y="386" text-anchor="middle">Eligibility agent</text>
+  <text class="s" x="355" y="405" text-anchor="middle">typed rules, exemptions</text>
+  <rect class="ai" x="264" y="430" width="182" height="58" rx="10"/>
+  <text class="t" x="355" y="454" text-anchor="middle">Risk agent</text>
+  <text class="s" x="355" y="473" text-anchor="middle">risky clauses, pre-bid queries</text>
+
+  <rect class="code" x="496" y="380" width="164" height="64" rx="10"/>
+  <text class="t" x="578" y="408" text-anchor="middle">VerifyGrounding</text>
+  <text class="s" x="578" y="427" text-anchor="middle">quote on cited page?</text>
+
+  <rect class="code" x="694" y="380" width="150" height="64" rx="10"/>
+  <text class="t" x="769" y="408" text-anchor="middle">EvaluateRules</text>
+  <text class="s" x="769" y="427" text-anchor="middle">profile vs. rules</text>
+
+  <rect class="box" x="878" y="380" width="120" height="64" rx="10"/>
+  <text class="t" x="938" y="408" text-anchor="middle">Summarize</text>
+  <text class="s" x="938" y="427" text-anchor="middle">from results only</text>
+
+  <rect class="box" x="1032" y="380" width="108" height="64" rx="10"/>
+  <text class="t" x="1086" y="408" text-anchor="middle">SaveReport</text>
+  <text class="s" x="1086" y="427" text-anchor="middle">verdict</text>
+
+  <path class="line" d="M210 412 H244" marker-end="url(#arrow)"/>
+  <path class="line" d="M462 412 H492" marker-end="url(#arrow)"/>
+  <path class="line" d="M660 412 H690" marker-end="url(#arrow)"/>
+  <path class="line" d="M844 412 H874" marker-end="url(#arrow)"/>
+  <path class="line" d="M998 412 H1028" marker-end="url(#arrow)"/>
+
+  <text class="cap" x="578" y="528" text-anchor="middle" fill="#2D7650">Code verifies</text>
+  <text class="s" x="578" y="546" text-anchor="middle">unverified items only say Check</text>
+  <text class="cap" x="769" y="528" text-anchor="middle" fill="#2D7650">Rules decide</text>
+  <text class="s" x="769" y="546" text-anchor="middle">84 unit tests</text>
+  <text class="s" x="1138" y="338" text-anchor="end">each step reads/writes artifacts in S3; state carries only ids</text>
+
+  <!-- managed AI services -->
+  <rect class="box" x="62" y="640" width="160" height="60" rx="10"/>
+  <text class="t" x="142" y="665" text-anchor="middle">Amazon Textract</text>
+  <text class="s" x="142" y="684" text-anchor="middle">scanned pages only</text>
+  <path class="line" d="M136 444 V636" marker-end="url(#arrow)"/>
+
+  <rect class="ai" x="264" y="640" width="250" height="60" rx="10"/>
+  <text class="t" x="389" y="665" text-anchor="middle">Amazon Bedrock: Claude</text>
+  <text class="s" x="389" y="684" text-anchor="middle">every item returns a verbatim quote + page</text>
+  <path class="vline" d="M355 488 V636" marker-end="url(#arrowv)"/>
+  <path class="vline" d="M938 444 V610 H470 V636" marker-end="url(#arrowv)"/>
+</svg>
