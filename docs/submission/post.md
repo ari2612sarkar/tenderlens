@@ -47,7 +47,7 @@ checked for a demo small IT company:**
 - **Verdict: Eligible with caution.** It caught a requirement a first read easily misses: service-centre
   presence near the consignee in Bangalore, while the company is in Haryana.
 
-![Verdict table](proof/partyrock-verdict.jpg)
+![Verdict table](https://raw.githubusercontent.com/ari2612sarkar/tenderlens/main/docs/submission/proof/partyrock-verdict.jpg)
 
 ### How it stays trustworthy
 
@@ -72,7 +72,7 @@ queries → Documents to prepare, plus a chatbot.
 
 **Production architecture, in the repo and ready to deploy** with one CDK command:
 
-![TenderLens architecture](architecture.png)
+![TenderLens architecture](https://raw.githubusercontent.com/ari2612sarkar/tenderlens/main/docs/submission/architecture.png)
 
 - **AWS Step Functions** pipeline: ExtractText → Parallel(EligibilityAgent, RiskAgent) → VerifyGrounding →
   EvaluateRules → Summarize → SaveReport, with per-step retries and failure handling.
