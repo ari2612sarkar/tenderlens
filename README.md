@@ -7,6 +7,8 @@ profile, and shows the exact line, on the exact page, behind each answer. It als
 clauses with ready-to-send pre-bid queries, lists the documents to prepare, and matches you to central
 MSME schemes.
 
+**Live app (AWS PartyRock, Amazon Bedrock):** https://partyrock.aws/u/soviet1991/OCmIbF0Qg/TenderLens-Lite%253A-Government-Bid-Eligibility-Checker
+
 Built for **AWS Builder Center: Zero to Shipped (2026)** · Category `#commercial-potential` · Lane `#startups`
 (Valivo.ai's first vertical).
 
@@ -85,9 +87,10 @@ bash scripts/deploy.sh
 
 ## How a coding agent built and shipped this
 
-The app was designed and built with **Claude Code** connected to the AWS account through the AWS CLI. The
-agent wrote the code and tests, synthesised and deployed the CDK stack, ran the pipeline against live
-tenders, and checked CloudWatch and Step Functions when something failed. See
+The app was designed and built with **Claude Code**. The agent wrote the code and tests, synthesised the
+CDK stack, and built the live PartyRock version through Claude in Chrome (recorded in
+`docs/submission/proof/partyrock-build.gif`). The production stack deploys with `scripts/deploy.sh` once the
+AWS account is activated. See
 [`docs/agent-aws-connection.md`](docs/agent-aws-connection.md) for the evidence.
 
 ---

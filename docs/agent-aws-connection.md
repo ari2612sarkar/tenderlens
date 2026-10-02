@@ -1,38 +1,33 @@
-# Proof: coding agent ↔ AWS connection
+# Proof: coding agent working on AWS
 
-The hackathon requires *"a coding agent connected to the AWS console, with documented proof of the
-connection."* TenderLens was built with **Claude Code** (Anthropic's coding agent, running in the terminal)
-connected to the AWS account through the **AWS CLI v2**. It authenticates as a dedicated IAM user,
-**`claude-code-agent`**, so every AWS action the agent performed is attributable to it in AWS CloudTrail.
+The hackathon asks for *"a coding agent connected to the AWS console, with documented proof of the
+connection."* TenderLens was built with **Claude Code** (Anthropic's coding agent).
 
-## Evidence
+**Current status, stated plainly:** my AWS account isn't fully activated yet (card verification pending),
+so the agent could not yet sign in to the AWS console with IAM credentials. The live app therefore runs
+on **AWS PartyRock** (Amazon Bedrock), which needs no AWS account, and the agent worked on AWS through the
+browser instead.
 
-Each item lists how it's produced. Screenshots go in `docs/submission/proof/`.
+## Evidence available now
 
-1. **Identity**: in the Claude Code session the agent runs
-   `aws sts get-caller-identity`. The output shows `arn:aws:iam::<account>:user/claude-code-agent`.
-   → `proof/1-identity.png`
-2. **Infrastructure deployed by the agent**: the agent runs `bash scripts/deploy.sh`
-   (`cdk deploy TenderLens`) and the CloudFormation outputs appear (SiteUrl, StateMachineArn, ...).
-   → `proof/2-cdk-deploy.png`
-3. **CloudTrail attribution**: AWS Console → CloudTrail → **Event history** → filter
-   **User name = claude-code-agent**. Events such as `CreateStack`, `CreateFunction`, `CreateStateMachine`,
-   `StartExecution`, `PutObject` all come from the agent's credentials.
-   → `proof/3-cloudtrail.png`
-4. **The pipeline the agent built, running**: Step Functions console → `TenderLens-AnalyzeTender` → a
-   succeeded execution's graph view (ExtractText → ExtractionAgents → VerifyGrounding → EvaluateRules →
-   Summarize → SaveReport). → `proof/4-step-functions.png`
-5. **Session record**: this repository's git history. Every commit carries a `Co-Authored-By: Claude`
+1. **The agent building the live app on AWS:** `docs/submission/proof/partyrock-build.gif`, recorded by
+   Claude in Chrome while Claude Code drove it. It shows the agent generating the PartyRock flow, editing
+   each widget's prompt, switching every step to Claude Sonnet 5 on Amazon Bedrock
+   (`bedrock-anthropic.claude-5-0-sonnet-v1-0`), disabling web search, uploading a live GeM bid,
+   running the flow and sharing it.
+2. **The live app and a real run:** `proof/partyrock-app.jpg`, `proof/partyrock-verdict.jpg`.
+3. **Session record:** this repository's git history. Every commit carries a `Co-Authored-By: Claude`
    trailer and a link to the Claude Code session.
+4. **AWS tooling set up by the agent:** AWS CLI v2 installed without admin rights; live Bedrock docs
+   checked to choose the Messages API endpoint and the IAM action `bedrock-mantle:CreateInference`;
+   `scripts/smoke_bedrock.py` written to verify model access as soon as credentials exist.
 
-## What the agent did with AWS access
+## When the AWS account is activated
 
-Before the account was connected:
-- Installed the AWS CLI v2 without admin rights (extracted the MSI into the user profile).
-- Checked live Bedrock documentation to pick the right endpoint (Messages API on `bedrock-mantle`) and
-  the IAM action `bedrock-mantle:CreateInference`.
+Follow `docs/submission/runbook.md`. The agent then authenticates as IAM user `claude-code-agent`, and
+the console-connection proof becomes:
 
-On deploy day (update this list to match what actually happened):
-- Ran `scripts/smoke_bedrock.py` to find which Claude models the account can call and pinned one for the stack.
-- Bootstrapped CDK, deployed the `TenderLens` stack, precomputed the sample reports through the live
-  Step Functions pipeline, and smoke-tested the public URL.
+- `aws sts get-caller-identity` → `arn:aws:iam::<account>:user/claude-code-agent`
+- `cdk deploy TenderLens` output (SiteUrl, StateMachineArn)
+- CloudTrail **Event history** filtered to user `claude-code-agent` (CreateStack, StartExecution, …)
+- Step Functions graph of a succeeded `TenderLens-AnalyzeTender` execution

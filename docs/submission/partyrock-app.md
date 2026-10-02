@@ -1,5 +1,12 @@
 # TenderLens Lite on PartyRock: app definition
 
+> **As built (Oct 2, 2026):** live at https://partyrock.aws/u/soviet1991/OCmIbF0Qg/TenderLens-Lite%253A-Government-Bid-Eligibility-Checker
+> (shared with "Anyone with the link"). PartyRock generated the flow from a description; the agent then appended the
+> grounding rules below to each AI step, set every step to Claude Sonnet 5 on Bedrock with web search off, and
+> pre-filled the demo company. Live widget names: Tender PDF, Eligibility Requirements and MSE Exemptions,
+> Company Profile, Tender Chatbot, Document Preparation Checklist, Risky Contract Clauses and Pre-Bid Queries,
+> Eligibility Check and Verdict. The definition below is the reference spec (and a manual rebuild guide).
+
 Live demo of TenderLens that runs on AWS PartyRock (Amazon Bedrock) with no AWS account needed.
 Build at <https://partyrock.aws/> → **Build your own app** → start from a blank app and add the widgets below in order.
 In each AI widget's settings, pick the most capable **Claude** model offered.
