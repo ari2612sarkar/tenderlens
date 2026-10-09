@@ -98,3 +98,4 @@ AWS account is activated. See
 ---
 
 TenderLens is a decision aid, not legal advice. Always confirm requirements against the tender.
+# AWS-Hackathon-2026
